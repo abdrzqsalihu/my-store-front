@@ -1,0 +1,7 @@
+{
+    "recommendations": [
+        "esbenp.prettier-vscode",
+        "zignd.html-css-class-completion",
+        "ecmel.vscode-html-css"
+    ]
+}
