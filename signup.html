@@ -13,7 +13,7 @@
     <!-- Stylesheets -->
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/custom.css">
-    <title>My-Store-Front - Sign In</title>
+    <title>My-Store-Front - Sign Up</title>
 </head>
 
 <style>
@@ -54,30 +54,39 @@
             <div class="custom-form-width">
                     <section class="auth-wrapper">
                         <div style="margin:auto">
-                                <h2 class="auth-section-title">Log In</h2>
-                                <p class="auth-section-subtitle">Sign in to your account to continue.</p>
+                                <h2 class="auth-section-title">Let's get started</h2>
+                                <p class="auth-section-subtitle mt-2">With just a few minutes, you can start managing your business like a professional.</p>
                                 <form action="" method="POST">
                                     <div class="form-group">
-                                        <label for="email">Email <sup>*</sup></label>
-                                        <input type="email" class="form-control" id="email" name="email" placeholder="Email *">
+                                        <input type="text" class="form-control" name="store" placeholder="Store Name">
                                     </div>
                                     <div class="form-group">
-                                        <label for="password">Password <sup>*</sup></label>
-                                        <input type="password" class="form-control" id="password" name="password" placeholder="Password *">
+                                        <input type="text" class="form-control" name="name" placeholder="Full Name">
                                     </div>
-                                    <div class="form-actions-wrapper d-flex flex-wrap align-items-center justify-content-between">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" name="phone" placeholder="Phone Number">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" name="email" placeholder="Email Address">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+                                    </div>
+                                    <div class="form-group">
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="" id="keepLogin">
-                                            <label class="form-check-label" for="keepLogin">
-                                                keep me login
+                                            <input class="form-check-input" type="checkbox" id="showpassword">
+                                            <label class="form-check-label" for="showpassword">
+                                                Show password
                                             </label>
                                         </div>
-                                        <a href="#!" class="forgot-password-link">Forgot password?</a>
                                     </div>
                                     <button class="btn btn-warning btn-auth-submit" style="width: 100%;" type="submit">Submit</button>
                                 </form>
-                                <p class="mt-2 mb-0 text-center">
-                                    New User? <a href="signup.html" class="text-main font-weight-bold">Sign Up</a>
+                                <p class="mt-3 mb-4 text-center">
+                                   By creating a store, you agree to our <a href="#!" class="text-main font-weight-bold">Terms of use </a> and <a href="#!" class="text-main font-weight-bold">Privacy policy. </a>
+                                </p>
+                                <p class="mb-0 text-center">
+                                    Already have an account? <a href="signin.html" class="text-main font-weight-bold">Sign In</a>
                                 </p>
                             </div>
                     </section>
