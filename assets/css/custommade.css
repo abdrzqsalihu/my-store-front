@@ -19,7 +19,15 @@
   background-position: 0 0,21px 21px !important;
   }
 
-
+/* Media query for small screens */
+@media (max-width: 767px) {
+  .font-sm-35 {
+    font-size: 35px !important;
+    }
+  .font-sm-30 {
+      font-size: 30px !important;
+    }
+  }
 
 
 /* Sign In & Sign Up Page Styles */
