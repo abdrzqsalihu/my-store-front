@@ -1,0 +1,39 @@
+
+/* CUSTOM UNIVERSAL STYLES */
+.nav-link:hover{
+    font-weight: 500 !important;
+  }
+  
+  .text-main{
+    color: #5D0C1D !important;
+  }
+  .pattern {
+    position: fixed !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    
+  background-color: #e5e5f7 !important;
+  opacity: 0.2 !important;
+  background-image:  radial-gradient(#5D0C1D 1.05px, transparent 1.05px), radial-gradient(#5D0C1D 1.05px, #e5e5f7 1.05px) !important;
+  background-size: 42px 42px !important;
+  background-position: 0 0,21px 21px !important;
+  }
+
+
+
+
+/* Sign In & Sign Up Page Styles */
+
+/* Default styles for the form */
+.custom-form-width {
+  width: 45%; 
+  margin: 0 auto; 
+}
+
+/* Media query for small screens */
+@media (max-width: 767px) {
+.custom-form-width {
+    width: 100%; 
+    margin: 0 auto; 
+  }
+}
