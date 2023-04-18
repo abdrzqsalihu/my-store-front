@@ -39,8 +39,22 @@
                                 <p class="auth-section-subtitle mt-2">Sign up for our waitlist and be among the first to receive notification when we launch!.</p>
                                 <form name="contact" method="POST" data-netlify="true">
                                     <div class="form-group">
-                                        <label for="email">Email <sup>*</sup></label>
-                                        <input type="email" class="form-control" id="email" name="email" placeholder="Email *">
+                                        <label for="email">Email Address <sup>*</sup></label>
+                                        <input type="email" class="form-control" id="email" name="email" placeholder="Email Address *">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="phone">Phone Number<sup>*</sup></label>
+                                        <input type="text" class="form-control" id="phone" name="phone" placeholder="Phone Number *" required>
+                                    </div>
+                                    <div class="form-group">
+                                      <select class="form-select">
+                                        <option selected>What are you selling?</option>
+                                        <option value="Food&Beverages">Food & Beverages</option>
+                                        <option value="Apparel&Accessories">Apparel & Accessories</option>
+                                        <option value="Beauty&PersonalCare">Beauty & Personal Care</option>
+                                        <option value="Handicrafts">Handicrafts</option>
+                                        <option value="Others">Others</option>
+                                      </select>
                                     </div>
                                     <button class="btn btn-warning btn-auth-submit" style="width: 100%;" type="submit">Submit</button>
                                 </form>
