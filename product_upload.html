@@ -40,7 +40,25 @@ box-shadow: inset 0 0 0 6px #eee;
 transform: scale(0.8);
 opacity: 0.3;
 }
+.uploader label.hover #start2 i.fa {
+transform: scale(0.8);
+opacity: 0.3;
+}
+.uploader label.hover #start3 i.fa {
+transform: scale(0.8);
+opacity: 0.3;
+}
 .uploader #start {
+float: left;
+clear: both;
+width: 100%;
+}
+.uploader #start2 {
+float: left;
+clear: both;
+width: 100%;
+}
+.uploader #start3 {
 float: left;
 clear: both;
 width: 100%;
@@ -48,7 +66,23 @@ width: 100%;
 .uploader #start.hidden {
 display: none;
 }
+.uploader #start2.hidden {
+display: none;
+}
+.uploader #start3.hidden {
+display: none;
+}
 .uploader #start i.fa {
+font-size: 50px;
+margin-bottom: 1rem;
+transition: all 0.2s ease-in-out;
+}
+.uploader #start2 i.fa {
+font-size: 50px;
+margin-bottom: 1rem;
+transition: all 0.2s ease-in-out;
+}
+.uploader #start3 i.fa {
 font-size: 50px;
 margin-bottom: 1rem;
 transition: all 0.2s ease-in-out;
@@ -58,11 +92,36 @@ float: left;
 clear: both;
 width: 100%;
 }
+.uploader #response2 {
+float: left;
+clear: both;
+width: 100%;
+}
+.uploader #response3 {
+float: left;
+clear: both;
+width: 100%;
+}
 .uploader #response.hidden {
+display: none;
+}
+.uploader #response2.hidden {
+display: none;
+}
+.uploader #response3.hidden {
 display: none;
 }
 .uploader #response #messages {
 margin-bottom: 0.5rem;
+word-wrap: break-word; 
+}
+.uploader #response2 #messages2 {
+margin-bottom: 0.5rem;
+word-wrap: break-word; 
+}
+.uploader #response3 #messages3 {
+margin-bottom: 0.5rem;
+word-wrap: break-word; 
 }
 .uploader #file-image {
 display: inline;
@@ -74,13 +133,51 @@ max-width: 180px;
 .uploader #file-image.hidden {
 display: none;
 }
+.uploader #file-image2 {
+display: inline;
+margin: 0 auto 0.5rem auto;
+width: auto;
+height: auto;
+max-width: 180px;
+}
+.uploader #file-image2.hidden {
+display: none;
+}
+.uploader #file-image3 {
+display: inline;
+margin: 0 auto 0.5rem auto;
+width: auto;
+height: auto;
+max-width: 180px;
+}
+.uploader #file-image3.hidden {
+display: none;
+}
 .uploader #notimage {
 display: block;
 float: left;
 clear: both;
 width: 100%;
 }
+.uploader #notimage2 {
+display: block;
+float: left;
+clear: both;
+width: 100%;
+}
+.uploader #notimage3 {
+display: block;
+float: left;
+clear: both;
+width: 100%;
+}
 .uploader #notimage.hidden {
+display: none;
+}
+.uploader #notimage2.hidden {
+display: none;
+}
+.uploader #notimage3.hidden {
 display: none;
 }
 .uploader progress, .uploader .progress {
@@ -175,19 +272,19 @@ cursor: pointer;
 
                                     <div class="row">
                                       <div class="col-md-6">
-                                        <div id="file-upload-form" class="uploader">    
-                                          <input id="file-upload" type="file" name="ImageFile" required accept="image/*" />
-                                          <label for="file-upload" id="file-drag" style="cursor:pointer">
-                                            <img id="file-image" src="#" alt="Preview" class="hidden">
-                                            <div id="start">
+                                        <div id="file-upload-form2" class="uploader">    
+                                          <input id="file-upload2" type="file" name="ImageFile2" required accept="image/*" />
+                                          <label for="file-upload2" id="file-drag2" style="cursor:pointer">
+                                            <img id="file-image2" src="#" alt="Preview" class="hidden">
+                                            <div id="start2">
                                               <i class="fa fa-download" aria-hidden="true"></i>
                                               <div>Select a file or drag here</div>
-                                              <div id="notimage" class="hidden">Please select an image</div>
-                                              <span id="file-upload-btn" class="btn btn-primary">Select a file</span>
+                                              <div id="notimage2" class="hidden">Please select an image</div>
+                                              <span id="file-upload-btn2" class="btn btn-primary">Select a file</span>
                                             </div>
-                                            <div id="response" class="hidden">
-                                              <div id="messages"></div>
-                                              <progress class="progress" id="file-progress" value="0">
+                                            <div id="response2" class="hidden">
+                                              <div id="messages2"></div>
+                                              <progress class="progress" id="file-progress2" value="0">
                                                 <span>0</span>%
                                               </progress>
                                             </div>
@@ -195,19 +292,19 @@ cursor: pointer;
                                       </div>
                                       </div>
                                       <div class="col-md-6">
-                                        <div id="file-upload-form" class="uploader">    
-                                          <input id="file-upload" type="file" name="ImageFile" required accept="image/*" />
-                                          <label for="file-upload" id="file-drag" style="cursor:pointer">
-                                            <img id="file-image" src="#" alt="Preview" class="hidden">
-                                            <div id="start">
+                                        <div id="file-upload-form3" class="uploader">    
+                                          <input id="file-upload3" type="file" name="ImageFile3" required accept="image/*" />
+                                          <label for="file-upload3" id="file-drag3" style="cursor:pointer">
+                                            <img id="file-image3" src="#" alt="Preview" class="hidden">
+                                            <div id="start3">
                                               <i class="fa fa-download" aria-hidden="true"></i>
                                               <div>Select a file or drag here</div>
-                                              <div id="notimage" class="hidden">Please select an image</div>
-                                              <span id="file-upload-btn" class="btn btn-primary">Select a file</span>
+                                              <div id="notimage3" class="hidden">Please select an image</div>
+                                              <span id="file-upload-btn3" class="btn btn-primary">Select a file</span>
                                             </div>
-                                            <div id="response" class="hidden">
-                                              <div id="messages"></div>
-                                              <progress class="progress" id="file-progress" value="0">
+                                            <div id="response3" class="hidden">
+                                              <div id="messages3"></div>
+                                              <progress class="progress" id="file-progress3" value="0">
                                                 <span>0</span>%
                                               </progress>
                                             </div>
