@@ -1,0 +1,243 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicons/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;family=Volkhov:wght@700&amp;display=swap" rel="stylesheet">
+    <!-- Font Awesome CDN  -->
+    <script src="https://kit.fontawesome.com/1e78e0a43f.js" crossorigin="anonymous"></script>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <link rel="stylesheet" href="assets/css/custommade.css">
+    <title>FUT Mart - Product Upload</title>
+</head>
+<style>
+.uploader label {
+float: left;
+clear: both;
+width: 100%;
+padding: 2rem 1.5rem;
+text-align: center;
+background: #fff;
+border-radius: 7px;
+border: 3px solid #eee;
+transition: all 0.2s ease;
+user-select: none;
+}
+.uploader label:hover {
+border-color: #5D0C1D;
+}
+.uploader label.hover {
+border: 3px solid #5D0C1D;
+box-shadow: inset 0 0 0 6px #eee;
+}
+.uploader label.hover #start i.fa {
+transform: scale(0.8);
+opacity: 0.3;
+}
+.uploader #start {
+float: left;
+clear: both;
+width: 100%;
+}
+.uploader #start.hidden {
+display: none;
+}
+.uploader #start i.fa {
+font-size: 50px;
+margin-bottom: 1rem;
+transition: all 0.2s ease-in-out;
+}
+.uploader #response {
+float: left;
+clear: both;
+width: 100%;
+}
+.uploader #response.hidden {
+display: none;
+}
+.uploader #response #messages {
+margin-bottom: 0.5rem;
+}
+.uploader #file-image {
+display: inline;
+margin: 0 auto 0.5rem auto;
+width: auto;
+height: auto;
+max-width: 180px;
+}
+.uploader #file-image.hidden {
+display: none;
+}
+.uploader #notimage {
+display: block;
+float: left;
+clear: both;
+width: 100%;
+}
+.uploader #notimage.hidden {
+display: none;
+}
+.uploader progress, .uploader .progress {
+display: inline;
+clear: both;
+margin: 0 auto;
+width: 100%;
+max-width: 180px;
+height: 8px;
+border: 0;
+border-radius: 4px;
+background-color: #eee;
+overflow: hidden;
+}
+
+.uploader input[type="file"] {
+display: none;
+}
+.uploader div {
+/* margin: 0 0 0.5rem 0; */
+color: #5f6982;
+}
+.uploader .btn {
+display: inline-block;
+margin: 0.5rem 0.5rem 1rem 0.5rem;
+clear: both;
+font-family: "Roboto", sans-serif;
+font-weight: 700;
+font-size: 14px;
+text-decoration: none;
+text-transform: initial;
+border: none;
+border-radius: 0.2rem;
+outline: none;
+padding: 0 1rem;
+height: 36px;
+line-height: 36px;
+color: #fff;
+transition: all 0.2s ease-in-out;
+box-sizing: border-box;
+background: #5D0C1D;
+border-color: #5D0C1D;
+cursor: pointer;
+
+}
+</style>
+<body>
+  <div class='pattern'></div>
+     <!-- Navigation  -->
+     <nav class="navbar navbar-expand-lg navbar-light sticky-top" data-navbar-on-scroll="data-navbar-on-scroll">
+        <div class="container"><a class="navbar-brand" href="index.html"><img src="assets/img/logo-large-bg.png" width="100%" height="45" alt="logo" /></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"> </span></button>
+          <div class="collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item"><a class="nav-link" aria-current="page" href="index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link" aria-current="page" href="index.html#aboutus">About Us</a></li>
+              <li class="nav-item"><a class="nav-link" aria-current="page" href="index.html#pricing">Pricing</a></li>
+              <li class="nav-item"><a class="nav-link" aria-current="page" href="index.html#contact">Contact Us</a></li>
+            </ul>
+            <!-- <div class="d-flex ms-lg-4"><a class="btn btn-secondary-outline" href="signin.html">Sign In</a><a class="btn btn-warning ms-3" href="signup.html">Sign Up</a></div> -->
+          </div>
+        </div>
+      </nav>
+
+    <main class="page-auth">
+        <div class="container">
+            <div class="custom-form-width">
+                    <section class="auth-wrapper">
+                        <div style="margin:auto">
+                                <h2 class="auth-section-title text-center">Add an image of your product</h2>
+                                <p class="auth-section-subtitle mt-2 text-center">Add at least one image of your product</p>
+                                <form action="" method="POST" enctype="multipart/form-data">
+                                  <!-- Upload  -->
+                                    <div id="file-upload-form" class="uploader">    
+                                        <input id="file-upload" type="file" required name="ImageFile" required accept="image/*" />
+                                        <label for="file-upload" id="file-drag" style="cursor:pointer">
+                                          <img id="file-image" src="#" alt="Preview" class="hidden">
+                                          <div id="start">
+                                            <i class="fa fa-download" aria-hidden="true"></i>
+                                            <div>Select a file or drag here</div>
+                                            <div id="notimage" class="hidden">Please select an image</div>
+                                            <span id="file-upload-btn" class="btn btn-primary">Select a file</span>
+                                          </div>
+                                          <div id="response" class="hidden">
+                                            <div id="messages"></div>
+                                            <progress class="progress" id="file-progress" value="0">
+                                              <span>0</span>%
+                                            </progress>
+                                          </div>
+                                        </label>
+                                    </div>
+
+                                    <div class="row">
+                                      <div class="col-md-6">
+                                        <div id="file-upload-form" class="uploader">    
+                                          <input id="file-upload" type="file" name="ImageFile" required accept="image/*" />
+                                          <label for="file-upload" id="file-drag" style="cursor:pointer">
+                                            <img id="file-image" src="#" alt="Preview" class="hidden">
+                                            <div id="start">
+                                              <i class="fa fa-download" aria-hidden="true"></i>
+                                              <div>Select a file or drag here</div>
+                                              <div id="notimage" class="hidden">Please select an image</div>
+                                              <span id="file-upload-btn" class="btn btn-primary">Select a file</span>
+                                            </div>
+                                            <div id="response" class="hidden">
+                                              <div id="messages"></div>
+                                              <progress class="progress" id="file-progress" value="0">
+                                                <span>0</span>%
+                                              </progress>
+                                            </div>
+                                          </label>
+                                      </div>
+                                      </div>
+                                      <div class="col-md-6">
+                                        <div id="file-upload-form" class="uploader">    
+                                          <input id="file-upload" type="file" name="ImageFile" required accept="image/*" />
+                                          <label for="file-upload" id="file-drag" style="cursor:pointer">
+                                            <img id="file-image" src="#" alt="Preview" class="hidden">
+                                            <div id="start">
+                                              <i class="fa fa-download" aria-hidden="true"></i>
+                                              <div>Select a file or drag here</div>
+                                              <div id="notimage" class="hidden">Please select an image</div>
+                                              <span id="file-upload-btn" class="btn btn-primary">Select a file</span>
+                                            </div>
+                                            <div id="response" class="hidden">
+                                              <div id="messages"></div>
+                                              <progress class="progress" id="file-progress" value="0">
+                                                <span>0</span>%
+                                              </progress>
+                                            </div>
+                                          </label>
+                                      </div>
+                                      </div>
+                                    </div>
+                                    
+                                 
+                                    <button class="btn btn-warning btn-auth-submit mt-5" style="width: 100%;" type="submit">Upload</button>
+                                </form>
+                            </div>
+                    </section>
+                </div>
+            </div>
+    </main>
+
+
+       <!-- Script  -->
+       <script src="vendors/js/upload.js"></script>
+       <script src="vendors/@popperjs/popper.min.js"></script>
+       <script src="vendors/bootstrap/bootstrap.min.js"></script>
+       <script src="vendors/is/is.min.js"></script>
+       <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
+       <script src="vendors/fontawesome/all.min.js"></script>
+       <script src="assets/js/theme.js"></script>
+   
+       <!-- UIkit JS -->
+     <script src="https://cdn.jsdelivr.net/npm/uikit@3.16.13/dist/js/uikit.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/uikit@3.16.13/dist/js/uikit-icons.min.js"></script>
+</body>
+
+</html>
